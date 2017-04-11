@@ -55,6 +55,9 @@ body {
         }
         & tr{
             border-bottom: 1px solid rgba(255,255,255,.3);
+            &: last-child{
+                border: 0;
+            }
             
         }
         & td{
@@ -64,6 +67,24 @@ body {
         }
     }
     
+}
+.avatar{
+    position: relative;
+    text-align: center;
+    & .avatar-img{
+        display: inline-block;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        margin: 0px 0px .5em 0px;
+        
+    }
+    & .avatar-nombre{
+        display: block;
+        font-size: 13px;
+        color: #ccc;
+        padding: 4px;
+        
+    }
 }
 
 
