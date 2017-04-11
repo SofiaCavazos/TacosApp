@@ -62,8 +62,8 @@ function onDeviceReady(){
             onSuccess: function(imageData){
                 var img = "data:image/jpeg;base64,"+imageData;
                 $avatar.find(".avatar-img").attr("src",img);
-                firebase.database().ref('usuarios/'+idfb).set({
-                    "foto":img
+                firebase.database().ref('usuarios/'+idfb).update({
+                    "foto": img
                 });
             },
             onFail: function(message){
