@@ -1,5 +1,6 @@
 var Usuarios;
 $(function () {
+    $('#NewImg').draggable();
     var tacosDB = firebase.database().ref('/usuarios');
     //para que se actualice la informacion en cuanto algo pase.
     tacosDB.on('value', function(data){
