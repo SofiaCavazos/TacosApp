@@ -34,7 +34,8 @@ function nuevoUsuario(userId, nombre, foto, fecha, listo){
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady(){
-    
+    document.addEventListener("offline", onOffline, false);
+    document.addEventListener("online", onOnline, false);
     var config = {
         quality: (device.platform !== 'Android') ? 10 : 50,
         destinationType: Camera.DestinationType.DATA_URL,
@@ -56,7 +57,14 @@ function onDeviceReady(){
     function getPicture(d){
     navigator.camera.getPicture(d.onSuccess, d.onFail, d.config);
 }
-    
+    function onOffline()
+    {
+        $("#estatus").text("buuu!");
+    }
+    function onOnline()
+    {
+        $("#estatus").text("eaaa!");
+    }
 }
 
 
