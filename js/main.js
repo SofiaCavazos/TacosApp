@@ -36,15 +36,17 @@ function nuevoUsuario(userId, nombre, foto, fecha, listo){
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady(){
+    //despliega el texto que indica si esta conectado o no 
     document.addEventListener("offline", onOffline, false);
     document.addEventListener("online", onOnline, false);
+    
     var config = {
         quality: (device.platform !== 'Android') ? 10 : 50,
         destinationType: Camera.DestinationType.DATA_URL,
         targetWidth: (device.platform !== 'Android') ? 150 : 750
     };
     
-    $(".tacoContainer>img").on("click",function(){
+    $("#NewImg").on("click",function(){
         getPicture({
             config: config,
             onSuccess: function(imageData) {
