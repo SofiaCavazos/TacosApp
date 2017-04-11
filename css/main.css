@@ -54,6 +54,9 @@ body {
 .rolTableContainer .rolTable tr {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
+.rolTableContainer .rolTable tr:last-child {
+  border: 0;
+}
 .rolTableContainer .rolTable td {
   color: #eee;
   text-align: center;
@@ -68,6 +71,8 @@ body {
   border-radius: 50%;
   border: 3px solid #fff;
   margin: 0px 0px .5em 0px;
+  width: 80px;
+  height: 80px;
 }
 .avatar .avatar-nombre {
   display: block;
